@@ -1,0 +1,173 @@
+$bg-color1: white;
+$button-background-color1: #8300c8;
+$button-font-color1: #8300c8;
+$font-color1: black;
+
+$bg-color2: black;
+$button-background-color2: #f6fafa;
+$button-font-color2: white;
+$font-color2: white;
+
+
+@mixin flexLeftRow {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+@mixin flexCenterRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+@mixin flexCenterColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.headerMainDiv {
+    background-color: white;
+    margin-top: 20px;
+
+    .headerDarkButton {
+        a {
+            text-decoration: none;
+            color: $button-font-color1 ;
+        }
+    }
+
+    .headerButtonGroupDiv {
+        margin-top: 10px;
+        margin-bottom: 20px;
+
+        .headerGroupButton {
+            background-color: $button-background-color2;
+            border: 1px solid $button-background-color2;
+            color: $font-color1;
+            font-size: 14px;
+
+            &:hover {
+                background-color: $button-background-color1;
+                border: 1px solid $button-background-color1;
+                color: $font-color2;
+            }
+
+            &:focus {
+                background-color: $button-background-color1;
+                border: 1px solid $button-background-color1;
+                color: $font-color2;
+            }
+
+            &:active {
+                background-color: $button-background-color1;
+                border: 1px solid $button-background-color1;
+                color: $font-color2;
+            }
+
+            &:first-child {
+                border-radius: 25px 0px 0px 25px
+            }
+
+            &:last-child {
+                border-radius: 0px 25px 25px 0px
+            }
+
+
+        }
+    }
+
+    .headerDarkButton {
+        margin-top: 10px;
+        font-size: 22px;
+    }
+
+    .headerLoginButton button {
+        margin-top: 10px;
+        border-radius: 25px;
+        font-size: 14px;
+
+        background-color: $button-background-color1;
+        border: 1px solid $button-background-color1;
+        color: $font-color2;
+        font-size: 14px;
+
+        &:hover {
+            background-color: $button-background-color1;
+            border: 1px solid $button-background-color1;
+            color: $font-color2;
+        }
+
+        &:focus {
+            background-color: $button-background-color1;
+            border: 1px solid $button-background-color1;
+            color: $font-color2;
+        }
+
+        &:active {
+            background-color: $button-background-color1;
+            border: 1px solid $button-background-color1;
+            color: $font-color2;
+        }
+
+    }
+
+}
+.bodyMain{
+    .leftBodyMain{
+        background-image: url("./Assets/backgroundImage1.png");
+        height: 100%;
+        min-height: 100vh;
+  
+        @include flexCenterColumn;
+
+        .glass{
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, .15);
+            backdrop-filter: blur(5px);
+            height: 50%;
+            width: 70%;
+            position: relative;
+      
+            .glassInner{
+                @include flexCenterRow;
+                .formTextDiv{
+                    gap: 20px;
+                    .formTextLabel label{
+                        font-size: 60px;
+                        color: white;
+                    }
+                    .formTextDiv{
+                        input{
+                          border: none;
+                          height: 100%;
+                        }
+                    }
+                }
+            }
+            .glassFooter{
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                bottom: 0;
+                width: 100%;
+                background-color: #8300c8;
+                border-radius: 0px 0px 15px 15px;
+
+                label{
+                    color: white;
+                    a{
+                        color: black;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    
+}

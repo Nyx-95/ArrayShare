@@ -1,0 +1,120 @@
+.headerMainDiv {
+  background-color: white;
+  margin-top: 20px;
+}
+.headerMainDiv .headerDarkButton a {
+  text-decoration: none;
+  color: #8300c8;
+}
+.headerMainDiv .headerButtonGroupDiv {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.headerMainDiv .headerButtonGroupDiv .headerGroupButton {
+  background-color: #f6fafa;
+  border: 1px solid #f6fafa;
+  color: black;
+  font-size: 14px;
+}
+.headerMainDiv .headerButtonGroupDiv .headerGroupButton:hover {
+  background-color: #8300c8;
+  border: 1px solid #8300c8;
+  color: white;
+}
+.headerMainDiv .headerButtonGroupDiv .headerGroupButton:focus {
+  background-color: #8300c8;
+  border: 1px solid #8300c8;
+  color: white;
+}
+.headerMainDiv .headerButtonGroupDiv .headerGroupButton:active {
+  background-color: #8300c8;
+  border: 1px solid #8300c8;
+  color: white;
+}
+.headerMainDiv .headerButtonGroupDiv .headerGroupButton:first-child {
+  border-radius: 25px 0px 0px 25px;
+}
+.headerMainDiv .headerButtonGroupDiv .headerGroupButton:last-child {
+  border-radius: 0px 25px 25px 0px;
+}
+.headerMainDiv .headerDarkButton {
+  margin-top: 10px;
+  font-size: 22px;
+}
+.headerMainDiv .headerLoginButton button {
+  margin-top: 10px;
+  border-radius: 25px;
+  font-size: 14px;
+  background-color: #8300c8;
+  border: 1px solid #8300c8;
+  color: white;
+  font-size: 14px;
+}
+.headerMainDiv .headerLoginButton button:hover {
+  background-color: #8300c8;
+  border: 1px solid #8300c8;
+  color: white;
+}
+.headerMainDiv .headerLoginButton button:focus {
+  background-color: #8300c8;
+  border: 1px solid #8300c8;
+  color: white;
+}
+.headerMainDiv .headerLoginButton button:active {
+  background-color: #8300c8;
+  border: 1px solid #8300c8;
+  color: white;
+}
+
+.bodyMain .leftBodyMain {
+  background-image: url("./Assets/backgroundImage1.png");
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.bodyMain .leftBodyMain .glass {
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  height: 50%;
+  width: 70%;
+  position: relative;
+}
+.bodyMain .leftBodyMain .glass .glassInner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv {
+  gap: 20px;
+}
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextLabel label {
+  font-size: 60px;
+  color: white;
+}
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextDiv input {
+  border: none;
+  height: 100%;
+}
+.bodyMain .leftBodyMain .glass .glassFooter {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  background-color: #8300c8;
+  border-radius: 0px 0px 15px 15px;
+}
+.bodyMain .leftBodyMain .glass .glassFooter label {
+  color: white;
+}
+.bodyMain .leftBodyMain .glass .glassFooter label a {
+  color: black;
+  text-decoration: none;
+}/*# sourceMappingURL=App.css.map */
