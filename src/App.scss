@@ -136,15 +136,22 @@ $font-color2: white;
             .glassInner{
                 @include flexCenterRow;
                 .formTextDiv{
-                    gap: 20px;
-                    .formTextLabel label{
+                  
+                    .formTextLabel {
+                        gap: 100px;
+                        display: flex;
+                        label{
                         font-size: 60px;
                         color: white;
-                    }
+                    }}
                     .formTextDiv{
+                        display: flex;
                         input{
                           border: none;
                           height: 100%;
+                          width: 100%;
+                          background-color: black;
+                          color: white;
                         }
                     }
                 }

@@ -90,16 +90,23 @@
   align-items: center;
   flex-direction: row;
 }
-.bodyMain .leftBodyMain .glass .glassInner .formTextDiv {
-  gap: 20px;
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextLabel {
+  gap: 100px;
+  display: flex;
 }
 .bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextLabel label {
   font-size: 60px;
   color: white;
 }
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextDiv {
+  display: flex;
+}
 .bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextDiv input {
   border: none;
   height: 100%;
+  width: 100%;
+  background-color: black;
+  color: white;
 }
 .bodyMain .leftBodyMain .glass .glassFooter {
   position: absolute;

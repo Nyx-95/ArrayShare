@@ -7,7 +7,7 @@ function leftBodyPart() {
                 <div className="glassInner">
                     <div className="formTextDiv">
                         <div className="formTextLabel"><label>Text</label><label>Files</label></div>
-                        <div className="formTextDiv"><input type='text'></input></div>
+                        <div className="formTextDiv"><input type='text' placeholder="Type Something..."></input></div>
                     </div>
                 </div>
                 <div className="glassFooter"><label> <a href="#">Upgrage</a> to get more space</label></div>
