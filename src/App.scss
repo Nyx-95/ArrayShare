@@ -219,6 +219,7 @@ $font-color2: white;
                             resize: none;
                             background-color: rgba(0, 0, 0, 0.507);
                             color: white;
+                            width: 88%;
                         }
 
                         i {
@@ -300,9 +301,116 @@ $font-color2: white;
         }
     }
     .rightBodyMain{
-        
+        height: 100%;
+        min-height: 700px;
+        border-radius: 25px 25px 0px 0px;
+        position: relative;
+
+        @include flexCenterColumn;
+        .floatingIcons1{
+            @include flexCenterRow;
+            width: 100%;
+            position: relative;
+            height: 30px;
+            .floatingIconsImage{
+                position: absolute;
+                left: 0;
+                background-color: $button-background-color1;
+                padding: 9px 10px 9px 10px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                i{
+                    color: #8300c8;
+                    background-color: #f1dafd;
+                    font-size: 20px;
+                    padding: 3px 8px 3px 8px;
+                    border-radius: 5px
+                }
+                label{
+                  font-size: 16px;
+                  margin-left: 10px;
+                  color: $font-color2;
+                }
+            }
+            .floatingIconsImage1{
+                background-color: $button-background-color1;
+                border-radius: 15px;
+                position: absolute;
+                right: 0;
+                padding: 10px;
+                .floatingIconsImageInner{
+                    background-color: #efd5fc;
+                    padding: 15px 12px 15px 12px;
+                    border-radius: 50%;
+                    i{
+                        color: #8300c8;
+                        background-color: white;
+                        font-size: 20px;
+                    
+                        padding: 8px 8px 8px 8px;
+                        border-radius: 50%;
+                    
+                    }
+                }
+            }
+        }
+        .floatingIcons2{
+            @include flexCenterRow;
+            width: 100%;
+            position: relative;
+            height: 30px;
+
+            .floatingIconsImage{
+                position: absolute;
+                right: 0;
+                background-color: $button-background-color1;
+                padding: 9px 10px 9px 10px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                i{
+                    color: #8300c8;
+                    background-color: #f1dafd;
+                    font-size: 20px;
+                    padding: 3px 8px 3px 8px;
+                    border-radius: 5px
+                }
+                label{
+                  font-size: 16px;
+                  margin-left: 10px;
+                  color: $font-color2;
+                }
+            }
+            .floatingIconsImage1{
+                position: absolute;
+                left: 0;
+                background-color: $button-background-color1;
+                border-radius: 15px;
+                padding: 10px;
+                
+                .floatingIconsImageInner{
+                    background-color: #efd5fc;
+                    padding: 15px 12px 15px 12px;
+                    border-radius: 50%;
+                    i{
+                        color: #8300c8;
+                        background-color: white;
+                        font-size: 20px;
+                    
+                        padding: 8px 8px 8px 8px;
+                        border-radius: 50%;
+                    
+                    }
+                }
+            }
+        }
         .rightBodyMainInner{
             @include flexLeftColumn;
+            
+            margin-left: 90px;
             .rightBodyh1{
                 color: $font-color1;
                 font-size: 60px;
@@ -312,6 +420,17 @@ $font-color2: white;
                 color: #8300c8;
                 font-size: 60px;
                 font-family:'Expose-Black';
+            }
+        }
+        .rightBodyMainFooter{
+            position: absolute;
+            bottom: 0;
+            margin-left: 50px;
+            label{
+                a{
+                    color: #8300c8;
+                    text-decoration: none;
+                }
             }
         }
     }
