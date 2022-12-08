@@ -1,9 +1,26 @@
-.headerMainDiv {
-  background-color: white;
-  margin-top: 20px;
+@font-face {
+  font-family: "Expose-Black"; /*Can be any text*/
+  src: local("Expose-Black"), url("./Fonts/Expose/Expose-Black.ttf") format("truetype");
 }
-.headerMainDiv .headerDarkButton a {
+.App {
+  background-color: white;
+}
+
+.headerMainDiv {
+  padding-top: 20px;
+}
+.headerMainDiv .logoHeaderLabel1 {
+  font-family: "Expose-Black";
+  margin-bottom: 0px;
+}
+.headerMainDiv .logoHeaderLabel2 {
+  font-size: 40px;
+  font-family: "Expose-Black";
+}
+.headerMainDiv .headerDarkButton button {
   text-decoration: none;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
   color: #8300c8;
 }
 .headerMainDiv .headerButtonGroupDiv {
@@ -69,7 +86,8 @@
 .bodyMain .leftBodyMain {
   background-image: url("./Assets/backgroundImage1.png");
   height: 100%;
-  min-height: 100vh;
+  min-height: 700px;
+  border-radius: 25px 25px 0px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,7 +95,11 @@
 }
 .bodyMain .leftBodyMain .glass {
   border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid #817d7d;
+  background-color: rgba(77, 77, 77, 0.281);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: content-box;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   height: 50%;
@@ -90,22 +112,95 @@
   align-items: center;
   flex-direction: row;
 }
-.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextLabel {
-  gap: 100px;
-  display: flex;
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv {
+  width: 100%;
+  height: 100%;
+  margin-left: 10%;
 }
-.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextLabel label {
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextLabel {
+  gap: 50px;
+  position: relative;
+  display: flex;
+  height: 100px;
+  width: 90%;
+}
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextLabel button {
+  background-color: rgba(255, 255, 255, 0);
+  text-decoration: none;
+  border: none;
+}
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextLabel .textButton {
+  position: absolute;
   font-size: 60px;
+  left: 0%;
   color: white;
 }
-.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextDiv {
-  display: flex;
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextLabel .fileButton {
+  position: absolute;
+  font-size: 40px;
+  bottom: 15%;
+  right: 0;
+  color: rgba(255, 255, 255, 0.3);
 }
-.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextDiv input {
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextAreaDiv {
+  display: flex;
+  position: relative;
+}
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextAreaDiv textarea {
   border: none;
+  border-radius: 10px;
   height: 100%;
-  width: 100%;
-  background-color: black;
+  padding-top: 10px;
+  padding-left: 10px;
+  resize: none;
+  background-color: rgba(0, 0, 0, 0.507);
+  color: white;
+}
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextAreaDiv i {
+  color: white;
+  background-color: #8300c8;
+  padding: 3px 7px 3px 7px;
+  position: absolute;
+  bottom: 5%;
+  right: 15%;
+  border-radius: 50%;
+}
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formUploadAreaDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  padding: 10%;
+  border-radius: 15px;
+  border: 1px dashed rgba(255, 255, 255, 0.4588235294);
+  display: none;
+}
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formUploadAreaDiv .formUploadFirstParagraph {
+  margin-bottom: 0%;
+}
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formUploadAreaDiv p {
+  color: white;
+}
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formUploadAreaDiv .formUploadButton {
+  background-color: #8300c8;
+  border-color: #8300c8;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formUploadAreaDiv .formUploadButton:hover {
+  background-color: #8300c8;
+  border: 1px solid #8300c8;
+  color: white;
+}
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formUploadAreaDiv .formUploadButton:focus {
+  background-color: #8300c8;
+  border: 1px solid #8300c8;
+  color: white;
+}
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formUploadAreaDiv .formUploadButton:active {
+  background-color: #8300c8;
+  border: 1px solid #8300c8;
   color: white;
 }
 .bodyMain .leftBodyMain .glass .glassFooter {
@@ -124,4 +219,20 @@
 .bodyMain .leftBodyMain .glass .glassFooter label a {
   color: black;
   text-decoration: none;
+}
+.bodyMain .rightBodyMain .rightBodyMainInner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.bodyMain .rightBodyMain .rightBodyMainInner .rightBodyh1 {
+  color: black;
+  font-size: 60px;
+  font-family: "Expose-Black";
+}
+.bodyMain .rightBodyMain .rightBodyMainInner .rightBodyh2 {
+  color: #8300c8;
+  font-size: 60px;
+  font-family: "Expose-Black";
 }/*# sourceMappingURL=App.css.map */

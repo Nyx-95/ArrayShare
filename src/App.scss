@@ -8,6 +8,13 @@ $button-background-color2: #f6fafa;
 $button-font-color2: white;
 $font-color2: white;
 
+@font-face {
+    font-family: "Expose-Black";   /*Can be any text*/
+    src: local("Expose-Black"),
+      url("./Fonts/Expose/Expose-Black.ttf") format("truetype");
+  }
+
+
 
 @mixin flexLeftRow {
     display: flex;
@@ -15,6 +22,13 @@ $font-color2: white;
     align-items: center;
     flex-direction: row;
 }
+@mixin flexLeftColumn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
 @mixin flexCenterRow {
     display: flex;
     justify-content: center;
@@ -29,14 +43,26 @@ $font-color2: white;
     flex-direction: column;
 }
 
+.App {
+    background-color: white;
+}
 
 .headerMainDiv {
-    background-color: white;
-    margin-top: 20px;
 
+    padding-top: 20px;
+    .logoHeaderLabel1{
+        font-family:'Expose-Black';
+        margin-bottom: 0px;
+    }
+    .logoHeaderLabel2{
+        font-size: 40px;
+        font-family:'Expose-Black';
+    }
     .headerDarkButton {
-        a {
+        button {
             text-decoration: none;
+            background-color: rgba(255, 255, 255, 0);
+            border: none;
             color: $button-font-color1 ;
         }
     }
@@ -117,46 +143,142 @@ $font-color2: white;
     }
 
 }
-.bodyMain{
-    .leftBodyMain{
+
+.bodyMain {
+    .leftBodyMain {
         background-image: url("./Assets/backgroundImage1.png");
         height: 100%;
-        min-height: 100vh;
-  
+        min-height: 700px;
+        border-radius: 25px 25px 0px 0px;
+
         @include flexCenterColumn;
 
-        .glass{
+        .glass {
             border-radius: 15px;
-            background-color: rgba(0, 0, 0, 0.856);
+            border: 1px solid #817d7d;
+            background-color: rgba(77, 77, 77, 0.281);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-origin: content-box;
             backdrop-filter: blur(5px);
             height: 50%;
             width: 70%;
             position: relative;
-      
-            .glassInner{
+
+            .glassInner {
                 @include flexCenterRow;
-                .formTextDiv{
-                  
+
+                .formTextDiv {
+                    width: 100%;
+                    height: 100%;
+                    margin-left: 10%;
+
+
                     .formTextLabel {
-                        gap: 100px;
+                        gap: 50px;
+                        position: relative;
                         display: flex;
-                        label{
-                        font-size: 60px;
-                        color: white;
-                    }}
-                    .formTextDiv{
+                        height: 100px;
+                        width: 90%;
+
+                        button {
+                            background-color: rgba(255, 255, 255, 0);
+                            text-decoration: none;
+                            border: none;
+                         
+                           
+                        }
+
+                        .textButton {
+                            position: absolute;
+                            font-size: 60px;
+                            left: 0%;
+                            color: white;
+                        }
+
+                        .fileButton {
+                            position: absolute;
+                            font-size: 40px;
+                            bottom: 15%;
+                            right: 0;
+                            color: rgba(255, 255, 255, 0.3);
+                        }
+                    }
+
+                    .formTextAreaDiv {
+
                         display: flex;
-                        input{
-                          border: none;
-                          height: 100%;
-                          width: 100%;
-                          background-color: black;
-                          color: white;
+                        position: relative;
+
+                        textarea {
+                            border: none;
+                            border-radius: 10px;
+                            height: 100%;
+                            padding-top: 10px;
+                            padding-left: 10px;
+                            resize: none;
+                            background-color: rgba(0, 0, 0, 0.507);
+                            color: white;
+                        }
+
+                        i {
+                            color: white;
+                            background-color: #8300c8;
+                            padding: 3px 7px 3px 7px;
+                            position: absolute;
+                            bottom: 5%;
+                            right: 15%;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .formUploadAreaDiv {
+                
+                        @include flexCenterColumn;
+                        width: 90%;
+                        padding: 10%;
+                        border-radius: 15px;
+                        border: 1px dashed #ffffff75;
+                        display: none;
+
+                        .formUploadFirstParagraph {
+                            margin-bottom: 0%;
+                        }
+
+                        p {
+                            color: white;
+                        }
+
+                        .formUploadButton {
+                            background-color: #8300c8;
+                            border-color: #8300c8;
+                            padding-left: 30px;
+                            padding-right: 30px;
+
+                            &:hover {
+                                background-color: $button-background-color1;
+                                border: 1px solid $button-background-color1;
+                                color: $font-color2;
+                            }
+
+                            &:focus {
+                                background-color: $button-background-color1;
+                                border: 1px solid $button-background-color1;
+                                color: $font-color2;
+                            }
+
+                            &:active {
+                                background-color: $button-background-color1;
+                                border: 1px solid $button-background-color1;
+                                color: $font-color2;
+                            }
+
                         }
                     }
                 }
             }
-            .glassFooter{
+
+            .glassFooter {
                 position: absolute;
                 display: flex;
                 justify-content: center;
@@ -166,9 +288,10 @@ $font-color2: white;
                 background-color: #8300c8;
                 border-radius: 0px 0px 15px 15px;
 
-                label{
+                label {
                     color: white;
-                    a{
+
+                    a {
                         color: black;
                         text-decoration: none;
                     }
@@ -176,5 +299,21 @@ $font-color2: white;
             }
         }
     }
-    
+    .rightBodyMain{
+        
+        .rightBodyMainInner{
+            @include flexLeftColumn;
+            .rightBodyh1{
+                color: $font-color1;
+                font-size: 60px;
+                font-family:'Expose-Black';
+            }
+            .rightBodyh2{
+                color: #8300c8;
+                font-size: 60px;
+                font-family:'Expose-Black';
+            }
+        }
+    }
+
 }
