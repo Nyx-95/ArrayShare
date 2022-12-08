@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Expose-Black"; /*Can be any text*/
+  font-family: "Expose-Black";
   src: local("Expose-Black"), url("./Fonts/Expose/Expose-Black.ttf") format("truetype");
 }
 .App {
@@ -103,7 +103,7 @@
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   height: 50%;
-  width: 70%;
+  width: 60%;
   position: relative;
 }
 .bodyMain .leftBodyMain .glass .glassInner {
@@ -157,14 +157,17 @@
   color: white;
   width: 88%;
 }
-.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextAreaDiv i {
-  color: white;
-  background-color: #8300c8;
-  padding: 3px 7px 3px 7px;
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextAreaDiv a {
   position: absolute;
+  background-color: #8300c8;
   bottom: 5%;
   right: 15%;
   border-radius: 50%;
+  padding: 3px 7px 3px 7px;
+  text-decoration: none;
+}
+.bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextAreaDiv a i {
+  color: white;
 }
 .bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formUploadAreaDiv {
   display: flex;
@@ -231,16 +234,20 @@
   align-items: center;
   flex-direction: column;
 }
-.bodyMain .rightBodyMain .floatingIcons1 {
+.bodyMain .rightBodyMain .floatingIconsMain {
+  position: absolute;
+  top: 20%;
+  width: 100%;
+}
+.bodyMain .rightBodyMain .floatingIconsMain .floatingIcons1 {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   width: 100%;
   position: relative;
-  height: 30px;
 }
-.bodyMain .rightBodyMain .floatingIcons1 .floatingIconsImage {
+.bodyMain .rightBodyMain .floatingIconsMain .floatingIcons1 .floatingIconsImage {
   position: absolute;
   left: 0;
   background-color: #8300c8;
@@ -249,39 +256,106 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  -webkit-animation-name: floatingIconsImage;
+          animation-name: floatingIconsImage;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
 }
-.bodyMain .rightBodyMain .floatingIcons1 .floatingIconsImage i {
+@-webkit-keyframes floatingIconsImage {
+  0% {
+    transform: translateY(-10%);
+    transition: ease 0.5s;
+  }
+  50% {
+    transform: translateY(10%);
+    transition: ease 0.5s;
+  }
+}
+@keyframes floatingIconsImage {
+  0% {
+    transform: translateY(-10%);
+    transition: ease 0.5s;
+  }
+  50% {
+    transform: translateY(10%);
+    transition: ease 0.5s;
+  }
+}
+.bodyMain .rightBodyMain .floatingIconsMain .floatingIcons1 .floatingIconsImage i {
   color: #8300c8;
   background-color: #f1dafd;
   font-size: 20px;
   padding: 3px 8px 3px 8px;
   border-radius: 5px;
 }
-.bodyMain .rightBodyMain .floatingIcons1 .floatingIconsImage label {
+.bodyMain .rightBodyMain .floatingIconsMain .floatingIcons1 .floatingIconsImage label {
   font-size: 16px;
   margin-left: 10px;
   color: white;
 }
-.bodyMain .rightBodyMain .floatingIcons1 .floatingIconsImage1 {
+.bodyMain .rightBodyMain .floatingIconsMain .floatingIcons1 .floatingIconsImage1 {
   background-color: #8300c8;
   border-radius: 15px;
   position: absolute;
   right: 0;
   padding: 10px;
+  -webkit-animation-name: floatingIconsImage1;
+          animation-name: floatingIconsImage1;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
 }
-.bodyMain .rightBodyMain .floatingIcons1 .floatingIconsImage1 .floatingIconsImageInner {
+@-webkit-keyframes floatingIconsImage1 {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+@keyframes floatingIconsImage1 {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+.bodyMain .rightBodyMain .floatingIconsMain .floatingIcons1 .floatingIconsImage1 .floatingIconsImageInner {
   background-color: #efd5fc;
   padding: 15px 12px 15px 12px;
   border-radius: 50%;
 }
-.bodyMain .rightBodyMain .floatingIcons1 .floatingIconsImage1 .floatingIconsImageInner i {
+.bodyMain .rightBodyMain .floatingIconsMain .floatingIcons1 .floatingIconsImage1 .floatingIconsImageInner i {
   color: #8300c8;
   background-color: white;
   font-size: 20px;
   padding: 8px 8px 8px 8px;
   border-radius: 50%;
 }
-.bodyMain .rightBodyMain .floatingIcons2 {
+.bodyMain .rightBodyMain .floatingIconsMain1 {
+  position: absolute;
+  bottom: 20%;
+  width: 100%;
+}
+.bodyMain .rightBodyMain .floatingIconsMain1 .floatingIcons2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -290,7 +364,7 @@
   position: relative;
   height: 30px;
 }
-.bodyMain .rightBodyMain .floatingIcons2 .floatingIconsImage {
+.bodyMain .rightBodyMain .floatingIconsMain1 .floatingIcons2 .floatingIconsImage {
   position: absolute;
   right: 0;
   background-color: #8300c8;
@@ -299,32 +373,74 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  -webkit-animation-name: floatingIconsImage;
+          animation-name: floatingIconsImage;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
 }
-.bodyMain .rightBodyMain .floatingIcons2 .floatingIconsImage i {
+@keyframes floatingIconsImage {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+.bodyMain .rightBodyMain .floatingIconsMain1 .floatingIcons2 .floatingIconsImage i {
   color: #8300c8;
   background-color: #f1dafd;
   font-size: 20px;
   padding: 3px 8px 3px 8px;
   border-radius: 5px;
 }
-.bodyMain .rightBodyMain .floatingIcons2 .floatingIconsImage label {
+.bodyMain .rightBodyMain .floatingIconsMain1 .floatingIcons2 .floatingIconsImage label {
   font-size: 16px;
   margin-left: 10px;
   color: white;
 }
-.bodyMain .rightBodyMain .floatingIcons2 .floatingIconsImage1 {
+.bodyMain .rightBodyMain .floatingIconsMain1 .floatingIcons2 .floatingIconsImage1 {
   position: absolute;
   left: 0;
   background-color: #8300c8;
   border-radius: 15px;
   padding: 10px;
+  -webkit-animation-name: floatingIconsImage;
+          animation-name: floatingIconsImage;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
 }
-.bodyMain .rightBodyMain .floatingIcons2 .floatingIconsImage1 .floatingIconsImageInner {
+@keyframes floatingIconsImage {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 30px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+.bodyMain .rightBodyMain .floatingIconsMain1 .floatingIcons2 .floatingIconsImage1 .floatingIconsImageInner {
   background-color: #efd5fc;
   padding: 15px 12px 15px 12px;
   border-radius: 50%;
 }
-.bodyMain .rightBodyMain .floatingIcons2 .floatingIconsImage1 .floatingIconsImageInner i {
+.bodyMain .rightBodyMain .floatingIconsMain1 .floatingIcons2 .floatingIconsImage1 .floatingIconsImageInner i {
   color: #8300c8;
   background-color: white;
   font-size: 20px;

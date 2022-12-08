@@ -9,10 +9,10 @@ $button-font-color2: white;
 $font-color2: white;
 
 @font-face {
-    font-family: "Expose-Black";   /*Can be any text*/
+    font-family: "Expose-Black";
     src: local("Expose-Black"),
-      url("./Fonts/Expose/Expose-Black.ttf") format("truetype");
-  }
+        url("./Fonts/Expose/Expose-Black.ttf") format("truetype");
+}
 
 
 
@@ -22,6 +22,7 @@ $font-color2: white;
     align-items: center;
     flex-direction: row;
 }
+
 @mixin flexLeftColumn {
     display: flex;
     justify-content: center;
@@ -50,14 +51,17 @@ $font-color2: white;
 .headerMainDiv {
 
     padding-top: 20px;
-    .logoHeaderLabel1{
-        font-family:'Expose-Black';
+
+    .logoHeaderLabel1 {
+        font-family: 'Expose-Black';
         margin-bottom: 0px;
     }
-    .logoHeaderLabel2{
+
+    .logoHeaderLabel2 {
         font-size: 40px;
-        font-family:'Expose-Black';
+        font-family: 'Expose-Black';
     }
+
     .headerDarkButton {
         button {
             text-decoration: none;
@@ -150,7 +154,6 @@ $font-color2: white;
         height: 100%;
         min-height: 700px;
         border-radius: 25px 25px 0px 0px;
-
         @include flexCenterColumn;
 
         .glass {
@@ -162,7 +165,7 @@ $font-color2: white;
             background-origin: content-box;
             backdrop-filter: blur(5px);
             height: 50%;
-            width: 70%;
+            width: 60%;
             position: relative;
 
             .glassInner {
@@ -175,6 +178,7 @@ $font-color2: white;
 
 
                     .formTextLabel {
+
                         gap: 50px;
                         position: relative;
                         display: flex;
@@ -185,8 +189,8 @@ $font-color2: white;
                             background-color: rgba(255, 255, 255, 0);
                             text-decoration: none;
                             border: none;
-                         
-                           
+
+
                         }
 
                         .textButton {
@@ -222,19 +226,25 @@ $font-color2: white;
                             width: 88%;
                         }
 
-                        i {
-                            color: white;
-                            background-color: #8300c8;
-                            padding: 3px 7px 3px 7px;
+                        a {
                             position: absolute;
+                            background-color: #8300c8;
                             bottom: 5%;
                             right: 15%;
                             border-radius: 50%;
+                            padding: 3px 7px 3px 7px;
+                            text-decoration: none;
+
+                            i {
+                                color: white;
+
+                            }
                         }
+
                     }
 
                     .formUploadAreaDiv {
-                
+
                         @include flexCenterColumn;
                         width: 90%;
                         padding: 10%;
@@ -300,134 +310,254 @@ $font-color2: white;
             }
         }
     }
-    .rightBodyMain{
+
+    .rightBodyMain {
         height: 100%;
         min-height: 700px;
         border-radius: 25px 25px 0px 0px;
         position: relative;
-
         @include flexCenterColumn;
-        .floatingIcons1{
-            @include flexCenterRow;
-            width: 100%;
-            position: relative;
-            height: 30px;
-            .floatingIconsImage{
-                position: absolute;
-                left: 0;
-                background-color: $button-background-color1;
-                padding: 9px 10px 9px 10px;
-                border-radius: 10px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                i{
-                    color: #8300c8;
-                    background-color: #f1dafd;
-                    font-size: 20px;
-                    padding: 3px 8px 3px 8px;
-                    border-radius: 5px
-                }
-                label{
-                  font-size: 16px;
-                  margin-left: 10px;
-                  color: $font-color2;
-                }
-            }
-            .floatingIconsImage1{
-                background-color: $button-background-color1;
-                border-radius: 15px;
-                position: absolute;
-                right: 0;
-                padding: 10px;
-                .floatingIconsImageInner{
-                    background-color: #efd5fc;
-                    padding: 15px 12px 15px 12px;
-                    border-radius: 50%;
-                    i{
-                        color: #8300c8;
-                        background-color: white;
-                        font-size: 20px;
-                    
-                        padding: 8px 8px 8px 8px;
-                        border-radius: 50%;
-                    
-                    }
-                }
-            }
-        }
-        .floatingIcons2{
-            @include flexCenterRow;
-            width: 100%;
-            position: relative;
-            height: 30px;
 
-            .floatingIconsImage{
-                position: absolute;
-                right: 0;
-                background-color: $button-background-color1;
-                padding: 9px 10px 9px 10px;
-                border-radius: 10px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                i{
-                    color: #8300c8;
-                    background-color: #f1dafd;
-                    font-size: 20px;
-                    padding: 3px 8px 3px 8px;
-                    border-radius: 5px
+        .floatingIconsMain {
+            position: absolute;
+            top: 20%;
+            width: 100%;
+
+            .floatingIcons1 {
+                @include flexCenterRow;
+                width: 100%;
+                position: relative;
+
+                .floatingIconsImage {
+                    position: absolute;
+                    left: 0;
+                    background-color: $button-background-color1;
+                    padding: 9px 10px 9px 10px;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    animation-name: floatingIconsImage;
+                    animation-duration: 3s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: ease-in-out;
+                    margin-left: 30px;
+                    margin-top: 5px;
+
+                    @keyframes floatingIconsImage {
+                        0%{transform: translateY(-10%);transition: ease 0.5s;}
+                        50%{transform: translateY(10%);transition: ease 0.5s;}
+                      }
+                      
+
+                    i {
+                        color: #8300c8;
+                        background-color: #f1dafd;
+                        font-size: 20px;
+                        padding: 3px 8px 3px 8px;
+                        border-radius: 5px
+                    }
+
+                    label {
+                        font-size: 16px;
+                        margin-left: 10px;
+                        color: $font-color2;
+                    }
                 }
-                label{
-                  font-size: 16px;
-                  margin-left: 10px;
-                  color: $font-color2;
+
+                .floatingIconsImage1 {
+                    background-color: $button-background-color1;
+                    border-radius: 15px;
+                    position: absolute;
+                    right: 0;
+                    padding: 10px;
+                    animation-name: floatingIconsImage1;
+                    animation-duration: 3s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: ease-in-out;
+                    margin-left: 30px;
+                    margin-top: 5px;
+
+                    @keyframes floatingIconsImage1 {
+                        0% {
+                            transform: translate(0, 0px);
+                        }
+
+                        50% {
+                            transform: translate(0, 15px);
+                        }
+
+                        100% {
+                            transform: translate(0, -0px);
+                        }
+                    }
+
+                    .floatingIconsImageInner {
+                        background-color: #efd5fc;
+                        padding: 15px 12px 15px 12px;
+                        border-radius: 50%;
+
+                        i {
+                            color: #8300c8;
+                            background-color: white;
+                            font-size: 20px;
+
+                            padding: 8px 8px 8px 8px;
+                            border-radius: 50%;
+
+                        }
+                    }
                 }
             }
-            .floatingIconsImage1{
-                position: absolute;
-                left: 0;
-                background-color: $button-background-color1;
-                border-radius: 15px;
-                padding: 10px;
-                
-                .floatingIconsImageInner{
-                    background-color: #efd5fc;
-                    padding: 15px 12px 15px 12px;
-                    border-radius: 50%;
-                    i{
+
+        }
+
+        .floatingIconsMain1 {
+            position: absolute;
+            bottom: 20%;
+            width: 100%;
+
+           
+
+            .floatingIcons2 {
+                @include flexCenterRow;
+                width: 100%;
+                position: relative;
+                height: 30px;
+
+                .floatingIconsImage {
+                    position: absolute;
+                    right: 0;
+                    background-color: $button-background-color1;
+                    padding: 9px 10px 9px 10px;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    animation-name: floatingIconsImage;
+                    animation-duration: 3s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: ease-in-out;
+                    margin-left: 30px;
+                    margin-top: 5px;
+
+                    @keyframes floatingIconsImage {
+                        0% {
+                            transform: translate(0, 0px);
+                        }
+
+                        50% {
+                            transform: translate(0, 15px);
+                        }
+
+                        100% {
+                            transform: translate(0, -0px);
+                        }
+                    }
+
+                    i {
                         color: #8300c8;
-                        background-color: white;
+                        background-color: #f1dafd;
                         font-size: 20px;
-                    
-                        padding: 8px 8px 8px 8px;
+                        padding: 3px 8px 3px 8px;
+                        border-radius: 5px
+                    }
+
+                    label {
+                        font-size: 16px;
+                        margin-left: 10px;
+                        color: $font-color2;
+                    }
+                }
+
+                .floatingIconsImage1 {
+                    position: absolute;
+                    left: 0;
+                    background-color: $button-background-color1;
+                    border-radius: 15px;
+                    padding: 10px;
+                    animation-name: floatingIconsImage;
+                    animation-duration: 3s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: ease-in-out;
+                    margin-left: 30px;
+                    margin-top: 5px;
+
+                    @keyframes floatingIconsImage {
+                        0% {
+                            transform: translate(0, 0px);
+                        }
+
+                        50% {
+                            transform: translate(0, 30px);
+                        }
+
+                        100% {
+                            transform: translate(0, -0px);
+                        }
+                    }
+
+                    .floatingIconsImageInner {
+                        background-color: #efd5fc;
+                        padding: 15px 12px 15px 12px;
                         border-radius: 50%;
-                    
+
+                        i {
+                            color: #8300c8;
+                            background-color: white;
+                            font-size: 20px;
+
+                            padding: 8px 8px 8px 8px;
+                            border-radius: 50%;
+
+                        }
                     }
                 }
             }
         }
-        .rightBodyMainInner{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .rightBodyMainInner {
             @include flexLeftColumn;
-            
+
             margin-left: 90px;
-            .rightBodyh1{
+
+            .rightBodyh1 {
                 color: $font-color1;
                 font-size: 60px;
-                font-family:'Expose-Black';
+                font-family: 'Expose-Black';
             }
-            .rightBodyh2{
+
+            .rightBodyh2 {
                 color: #8300c8;
                 font-size: 60px;
-                font-family:'Expose-Black';
+                font-family: 'Expose-Black';
             }
         }
-        .rightBodyMainFooter{
+
+        .rightBodyMainFooter {
             position: absolute;
             bottom: 0;
             margin-left: 50px;
-            label{
-                a{
+
+            label {
+                a {
                     color: #8300c8;
                     text-decoration: none;
                 }

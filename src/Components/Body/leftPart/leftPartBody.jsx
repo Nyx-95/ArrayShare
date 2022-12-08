@@ -24,8 +24,8 @@ function leftBodyPart() {
   
     }
     const changePositionFile = () => {
-        $(".fileButton").css("right", "60%");
-        $(".textButton").css("left", "70%");
+        $(".fileButton").css("right", "50%");
+        $(".textButton").css("left", "60%");
 
         $(".textButton").css("transition", "1s");
         $(".fileButton").css("transition", "1s");
