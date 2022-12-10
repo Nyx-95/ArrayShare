@@ -24,8 +24,8 @@ function leftBodyPart() {
   
     }
     const changePositionFile = () => {
-        $(".fileButton").css("right", "50%");
-        $(".textButton").css("left", "60%");
+        $(".fileButton").css("right", "55%");
+        $(".textButton").css("left", "70%");
 
         $(".textButton").css("transition", "1s");
         $(".fileButton").css("transition", "1s");
@@ -38,10 +38,6 @@ function leftBodyPart() {
 
         $(".fileButton").css({"color": "white"});
         $(".textButton").css({"color": "rgba(255, 255, 255, 0.3)"});
-
-
-        
-       
     }
    
     
@@ -63,7 +59,7 @@ function leftBodyPart() {
                         </div>
                     </div>
                 </div>
-                <div className="glassFooter"><label> <a href="#">Upgrage</a> to get more space</label></div>
+                <div className="glassFooter"><label> <a href="#">Upgrade</a> to get more space</label></div>
 
             </div>
         </div>

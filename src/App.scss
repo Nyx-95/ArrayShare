@@ -1,20 +1,22 @@
 $bg-color1: white;
-$button-background-color1: #8300c8;
-$button-font-color1: #8300c8;
-$font-color1: black;
+$bg-color2: rgb(15, 15, 15);
 
-$bg-color2: black;
+$button-background-color1: #8300c8;
 $button-background-color2: #f6fafa;
+$button-background-color3: rgb(26, 26, 26);
+
 $button-font-color2: white;
+$button-font-color1: #8300c8;
+
+$font-color1: black;
 $font-color2: white;
+$font-color3:#8300c8;
 
 @font-face {
     font-family: "Expose-Black";
     src: local("Expose-Black"),
         url("./Fonts/Expose/Expose-Black.ttf") format("truetype");
 }
-
-
 
 @mixin flexLeftRow {
     display: flex;
@@ -44,9 +46,78 @@ $font-color2: white;
     flex-direction: column;
 }
 
-.App {
-    background-color: white;
-}
+.dark {
+    background-color: $bg-color2;
+    .headerMainDiv{
+        .headerButtonGroupDiv{
+            .headerGroupButton{
+                background-color: $button-background-color3;
+                border: 1px solid $button-background-color3;
+                color: $font-color2;
+                font-size: 14px;
+            }
+        }
+        .headerDarkButton{
+            .changeTheme{
+                color: $font-color2;
+            }
+        }
+    }
+    .bodyMain{
+        .rightBodyMain{
+            .floatingIconsMain{
+                .floatingIcons1{
+                    .floatingIconsImage{
+                        background-color:$button-background-color2 ;
+                        label{
+                            color: $font-color3;
+                        }
+                    }
+                    .floatingIconsImage1{
+                        background-color:$button-background-color2 ;
+                        label{
+                            color: $font-color3;
+                        }
+                    }
+                }
+                
+            }
+            .floatingIconsMain1{
+                .floatingIcons2{
+                    .floatingIconsImage{
+                        background-color:$button-background-color2 ;
+                        label{
+                            color: $font-color3;
+                        }
+                    }
+                    .floatingIconsImage1{
+                        background-color:$button-background-color2 ;
+                        label{
+                            color: $font-color3;
+                        }
+                    }
+
+                }
+            }
+            .rightBodyMainInner{
+                .rightBodyh1{
+                    color: $font-color2;
+                }
+                p{
+                    color: $font-color2;
+                }
+            }
+            .rightBodyMainFooter{
+                label{
+                    color: $font-color2;
+                }
+            }
+        }
+    }
+   }
+   .light {
+    background-color: #fff;
+   }
 
 .headerMainDiv {
 
@@ -170,11 +241,16 @@ $font-color2: white;
 
             .glassInner {
                 @include flexCenterRow;
+                flex-direction: column;
 
                 .formTextDiv {
-                    width: 100%;
+                    display: flex;
+                    width: 90%;
                     height: 100%;
-                    margin-left: 10%;
+                    /* margin-left: 10%; */
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
 
 
                     .formTextLabel {
@@ -183,7 +259,7 @@ $font-color2: white;
                         position: relative;
                         display: flex;
                         height: 100px;
-                        width: 90%;
+                        width: 100%;
 
                         button {
                             background-color: rgba(255, 255, 255, 0);
@@ -210,8 +286,7 @@ $font-color2: white;
                     }
 
                     .formTextAreaDiv {
-
-                        display: flex;
+                        width: 100%;
                         position: relative;
 
                         textarea {
@@ -223,14 +298,14 @@ $font-color2: white;
                             resize: none;
                             background-color: rgba(0, 0, 0, 0.507);
                             color: white;
-                            width: 88%;
+                            width: 100%;
                         }
 
                         a {
                             position: absolute;
                             background-color: #8300c8;
-                            bottom: 5%;
-                            right: 15%;
+                            bottom: 8%;
+                            right: 5%;
                             border-radius: 50%;
                             padding: 3px 7px 3px 7px;
                             text-decoration: none;
@@ -246,7 +321,7 @@ $font-color2: white;
                     .formUploadAreaDiv {
 
                         @include flexCenterColumn;
-                        width: 90%;
+                        width: 100%;
                         padding: 10%;
                         border-radius: 15px;
                         border: 1px dashed #ffffff75;

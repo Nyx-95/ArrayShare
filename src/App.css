@@ -2,8 +2,54 @@
   font-family: "Expose-Black";
   src: local("Expose-Black"), url("./Fonts/Expose/Expose-Black.ttf") format("truetype");
 }
-.App {
-  background-color: white;
+.dark {
+  background-color: rgb(15, 15, 15);
+}
+.dark .headerMainDiv .headerButtonGroupDiv .headerGroupButton {
+  background-color: rgb(26, 26, 26);
+  border: 1px solid rgb(26, 26, 26);
+  color: white;
+  font-size: 14px;
+}
+.dark .headerMainDiv .headerDarkButton .changeTheme {
+  color: white;
+}
+.dark .bodyMain .rightBodyMain .floatingIconsMain .floatingIcons1 .floatingIconsImage {
+  background-color: #f6fafa;
+}
+.dark .bodyMain .rightBodyMain .floatingIconsMain .floatingIcons1 .floatingIconsImage label {
+  color: #8300c8;
+}
+.dark .bodyMain .rightBodyMain .floatingIconsMain .floatingIcons1 .floatingIconsImage1 {
+  background-color: #f6fafa;
+}
+.dark .bodyMain .rightBodyMain .floatingIconsMain .floatingIcons1 .floatingIconsImage1 label {
+  color: #8300c8;
+}
+.dark .bodyMain .rightBodyMain .floatingIconsMain1 .floatingIcons2 .floatingIconsImage {
+  background-color: #f6fafa;
+}
+.dark .bodyMain .rightBodyMain .floatingIconsMain1 .floatingIcons2 .floatingIconsImage label {
+  color: #8300c8;
+}
+.dark .bodyMain .rightBodyMain .floatingIconsMain1 .floatingIcons2 .floatingIconsImage1 {
+  background-color: #f6fafa;
+}
+.dark .bodyMain .rightBodyMain .floatingIconsMain1 .floatingIcons2 .floatingIconsImage1 label {
+  color: #8300c8;
+}
+.dark .bodyMain .rightBodyMain .rightBodyMainInner .rightBodyh1 {
+  color: white;
+}
+.dark .bodyMain .rightBodyMain .rightBodyMainInner p {
+  color: white;
+}
+.dark .bodyMain .rightBodyMain .rightBodyMainFooter label {
+  color: white;
+}
+
+.light {
+  background-color: #fff;
 }
 
 .headerMainDiv {
@@ -111,18 +157,23 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  flex-direction: column;
 }
 .bodyMain .leftBodyMain .glass .glassInner .formTextDiv {
-  width: 100%;
+  display: flex;
+  width: 90%;
   height: 100%;
-  margin-left: 10%;
+  /* margin-left: 10%; */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextLabel {
   gap: 50px;
   position: relative;
   display: flex;
   height: 100px;
-  width: 90%;
+  width: 100%;
 }
 .bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextLabel button {
   background-color: rgba(255, 255, 255, 0);
@@ -143,7 +194,7 @@
   color: rgba(255, 255, 255, 0.3);
 }
 .bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextAreaDiv {
-  display: flex;
+  width: 100%;
   position: relative;
 }
 .bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextAreaDiv textarea {
@@ -155,13 +206,13 @@
   resize: none;
   background-color: rgba(0, 0, 0, 0.507);
   color: white;
-  width: 88%;
+  width: 100%;
 }
 .bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextAreaDiv a {
   position: absolute;
   background-color: #8300c8;
-  bottom: 5%;
-  right: 15%;
+  bottom: 8%;
+  right: 5%;
   border-radius: 50%;
   padding: 3px 7px 3px 7px;
   text-decoration: none;
@@ -174,7 +225,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   padding: 10%;
   border-radius: 15px;
   border: 1px dashed rgba(255, 255, 255, 0.4588235294);

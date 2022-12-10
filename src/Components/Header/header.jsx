@@ -8,9 +8,8 @@ import logoImage from '../../Assets/logoHeader.png'
 
 
 
-function Header() {
-
-
+function Header(props) {
+   
     return (
         <>
             <div className='headerMainDiv'>
@@ -33,7 +32,7 @@ function Header() {
                                 </ButtonGroup>
                             </div>
                         </Col>
-                        <Col xl={1}> <div className='headerDarkButton'><button className='changeTheme'><i className="ri-sun-line"></i> </button></div></Col>
+                        <Col xl={1}> <div className='headerDarkButton'><button className='changeTheme' onClick={props.changeTheme} ><i className="ri-sun-line"></i> </button></div></Col>
                         <Col xl={2}> <div className='headerLoginButton'><Button>Login / Register</Button></div></Col>
                     </Row>
                 </Container>
