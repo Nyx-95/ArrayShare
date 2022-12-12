@@ -346,8 +346,8 @@ $font-color3: #8300c8;
 
         @keyframes changeBg {
 
-            0%,
-            100% {
+          
+            0% {
                 background-image: url("./Assets/backgroundImage0.png");
 
             }
@@ -362,6 +362,10 @@ $font-color3: #8300c8;
 
             75% {
                 background-image: url("./Assets/backgroundImage3.jpg");
+            }
+            100% {
+                background-image: url("./Assets/backgroundImage0.png");
+
             }
         }
 

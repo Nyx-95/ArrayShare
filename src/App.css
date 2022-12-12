@@ -224,7 +224,7 @@
   background-size: cover;
 }
 @-webkit-keyframes changeBg {
-  0%, 100% {
+  0% {
     background-image: url("./Assets/backgroundImage0.png");
   }
   25% {
@@ -235,10 +235,13 @@
   }
   75% {
     background-image: url("./Assets/backgroundImage3.jpg");
+  }
+  100% {
+    background-image: url("./Assets/backgroundImage0.png");
   }
 }
 @keyframes changeBg {
-  0%, 100% {
+  0% {
     background-image: url("./Assets/backgroundImage0.png");
   }
   25% {
@@ -249,6 +252,9 @@
   }
   75% {
     background-image: url("./Assets/backgroundImage3.jpg");
+  }
+  100% {
+    background-image: url("./Assets/backgroundImage0.png");
   }
 }
 .bodyMain .leftBodyMain .glass {
