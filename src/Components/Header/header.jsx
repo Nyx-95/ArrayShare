@@ -44,7 +44,15 @@ function Header(props) {
                                 </ButtonGroup>
                             </div>
                         </Col>
-                        <Col md={1} lg={1} xl={1}> <div className='headerDarkButton'><button className='changeTheme' onClick={props.changeTheme} ><i className="ri-sun-line"></i> </button></div></Col>
+                        <Col md={1} lg={1} xl={1}>
+                            <div className='headerDarkButton'>
+                                {/*<button className='changeTheme' onClick={props.changeTheme} ><i className="ri-sun-line"></i> </button>*/}
+                                <label className="switch">
+                                    <input type="checkbox"  onChange={props.changeTheme}/>
+                                    <span className="slider round"></span>
+                                </label>
+                            </div>
+                        </Col>
                         <Col md={2} lg={2} xl={2}> <div className='headerLoginButton'><Button>Login / Register</Button></div></Col>
                     </Row>
 
@@ -63,7 +71,7 @@ function Header(props) {
 
                                     <ul className="menu__box">
                                         <li><a className="menu__item" href="#">Login / Signup</a></li>
-                                        <li><a className="menu__item" href="#" onClick={props.changeTheme}>Chanage Theme</a></li>
+                                        <li><a className="menu__item" href="#" onClick={props.changeTheme}>Change Theme</a></li>
                                         <li><a className="menu__item" href="#">How it works</a></li>
                                         <li><a className="menu__item" href="#">Download</a></li>
                                         <li><a className="menu__item" href="#">Upgrade</a></li>
