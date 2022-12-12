@@ -366,6 +366,10 @@
           animation-timing-function: ease-in-out;
   margin-left: 30px;
   margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 @-webkit-keyframes floatingIconsImage1 {
   0% {
@@ -393,6 +397,7 @@
   background-color: #efd5fc;
   padding: 15px 12px 15px 12px;
   border-radius: 50%;
+  position: relative;
 }
 .bodyMain .rightBodyMain .floatingIconsMain .floatingIcons1 .floatingIconsImage1 .floatingIconsImageInner i {
   color: #8300c8;

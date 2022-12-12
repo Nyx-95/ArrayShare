@@ -453,6 +453,8 @@ $font-color3:#8300c8;
                     animation-timing-function: ease-in-out;
                     margin-left: 30px;
                     margin-top: 5px;
+                    @include flexCenterRow;
+                    
 
                     @keyframes floatingIconsImage1 {
                         0% {
@@ -466,12 +468,18 @@ $font-color3:#8300c8;
                         100% {
                             transform: translate(0, -0px);
                         }
+                
                     }
+
+              
 
                     .floatingIconsImageInner {
                         background-color: #efd5fc;
                         padding: 15px 12px 15px 12px;
                         border-radius: 50%;
+                        position:  relative;
+                 
+            
 
                         i {
                             color: #8300c8;

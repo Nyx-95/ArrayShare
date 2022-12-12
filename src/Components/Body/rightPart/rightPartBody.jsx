@@ -8,7 +8,7 @@ function rightBodyPart() {
                 <div className='floatingIconsMain'>
                     <div className='floatingIcons1'>
                         <div className='floatingIconsImage' >  <i className="ri-image-2-line"></i> <label>Drop.png</label> </div>
-                        <div className='floatingIconsImage1' >  <div className='floatingIconsImageInner'> <i className="ri-music-2-line"></i> </div> </div>
+                        <div className='floatingIconsImage1' > <div className='floatingIconsImageInner'> <div className='rotatingBorder'>  </div> <i className="ri-music-2-line"></i> </div> </div>
                     </div>
                 </div>
                 <div className="rightBodyMainInner">
