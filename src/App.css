@@ -254,7 +254,8 @@
   transition-duration: 0.25s;
 }
 .headerMainDiv .header2 .menu__item:hover {
-  background-color: #CFD8DC;
+  background-color: #8300c8;
+  color: white;
 }
 
 .bodyMain .leftBodyMain {

@@ -388,7 +388,8 @@ $font-color3: #8300c8;
         }
 
         .menu__item:hover {
-            background-color: #CFD8DC;
+            background-color: $button-background-color1;
+            color: white;
         }
     }
 
