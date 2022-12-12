@@ -14,6 +14,12 @@
 .dark .headerMainDiv .headerDarkButton .changeTheme {
   color: white;
 }
+.dark .headerMainDiv .header2 .menu__box {
+  background-color: rgb(26, 26, 26);
+}
+.dark .headerMainDiv .header2 .menu__item {
+  color: rgb(105, 105, 105);
+}
 .dark .bodyMain .rightBodyMain .floatingIconsMain .floatingIcons1 .floatingIconsImage {
   background-color: #f6fafa;
 }

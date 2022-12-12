@@ -64,6 +64,15 @@ $font-color3: #8300c8;
                 color: $font-color2;
             }
         }
+        .header2{
+            .menu__box {   
+                background-color: $button-background-color3;
+            
+            }
+            .menu__item {
+              color: rgb(105, 105, 105);
+            }
+        }
 
     }
 
