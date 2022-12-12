@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div className="App theme">
-      <Header changeTheme={toggleTheme}/>
+      <Header changeTheme={toggleTheme} theme={theme}/>
       <Body ></Body>
     </div>
   );

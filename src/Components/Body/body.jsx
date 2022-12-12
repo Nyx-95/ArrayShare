@@ -11,8 +11,8 @@ function body() {
         <div className="bodyMain">
             <Container>
                 <Row>
-                    <Col xl={6}><LeftBodyPart></LeftBodyPart></Col>
-                    <Col xl={6}><RightBodyPart></RightBodyPart></Col>
+                    <Col md={6} lg={6} xl={6}><LeftBodyPart></LeftBodyPart></Col>
+                    <Col md={6} lg={6} xl={6}><RightBodyPart></RightBodyPart></Col>
                 </Row>
             </Container>
         </div>

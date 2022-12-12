@@ -48,7 +48,10 @@ function leftBodyPart() {
 
                 <div className="glassInner">
                     <div className="formTextDiv">
-                        <div className="formTextLabel"><button className="textButton" onClick={changePositionText}>Text</button><button className='fileButton' onClick={changePositionFile}>Files</button></div>
+                        <div className="formTextLabel">
+                            <button className="textButton" onClick={changePositionText}>Text</button>
+                            <button className='fileButton' onClick={changePositionFile}>Files</button>
+                        </div>
                        <div className="formTextAreaDiv"><textarea type='text' placeholder="Type Something..."  rows="8"></textarea> <a href="#"><i className="ri-download-line"></i></a></div>
                        <div className="formUploadAreaDiv">
                         <p className='formUploadFirstParagraph'>Drag and Drop any 2 files</p>
