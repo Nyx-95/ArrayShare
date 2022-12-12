@@ -218,8 +218,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  -webkit-animation: changeBg 2s infinite;
-          animation: changeBg 2s infinite;
+  -webkit-animation: changeBg 40s infinite;
+          animation: changeBg 40s infinite;
   background-repeat: no-repeat;
   background-size: cover;
 }

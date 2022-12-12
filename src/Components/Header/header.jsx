@@ -13,7 +13,7 @@ function Header(props) {
 
     useEffect(() => {
         let screenWidth = window.innerWidth;
-        if (screenWidth <= 767) {
+        if (screenWidth <= 991) {
             $(".header1").hide()
             $(".header2").show()
         }
@@ -49,11 +49,11 @@ function Header(props) {
                     </Row>
 
                     <Row className='header2'>
-                        <Col xs={6} sm={6} md={3} lg={3} xl={3}>
+                        <Col xs={6} sm={6} md={6} lg={3} xl={3}>
                             <img src={props.theme === 'light' ? logoImage : logoImage1} alt="logo" />
                         </Col>
 
-                        <Col xs={6} sm={6} md={2} lg={2} xl={2}>
+                        <Col xs={6} sm={6} md={6} lg={2} xl={2}>
                             <div className="hamburger-menu">
                                 <div className="hamburger-menu-inner">
                                     <input id="menu__toggle" type="checkbox" />

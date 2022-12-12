@@ -340,7 +340,7 @@ $font-color3: #8300c8;
         min-height: 700px;
         border-radius: 25px 25px 0px 0px;
         @include flexCenterColumn;
-        animation: changeBg 2s infinite;
+        animation: changeBg 40s infinite;
         background-repeat: no-repeat;
         background-size: cover;
 
