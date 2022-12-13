@@ -664,23 +664,29 @@
   transform-box: fill-box;
   -webkit-animation-name: hoop;
           animation-name: hoop;
+  /*
+                      @keyframes hoop {
+                          from { transform: translate(-160%, -33%) scale(0) ; }
+                          to { transform: translate(0%, 0%) scale(1); }
+                        }
+  */
   margin-left: 30px;
   margin-top: 5px;
 }
 @-webkit-keyframes hoop {
   from {
-    transform: translate(-160%, -33%) scale(0);
+    transform: translate(-226%, -183%) rotate(360deg) scale(0);
   }
   to {
-    transform: translate(0%, 0%) scale(1);
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
   }
 }
 @keyframes hoop {
   from {
-    transform: translate(-160%, -33%) scale(0);
+    transform: translate(-226%, -183%) rotate(360deg) scale(0);
   }
   to {
-    transform: translate(0%, 0%) scale(1);
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
   }
 }
 @keyframes floatingIconsImage {
