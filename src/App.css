@@ -256,6 +256,11 @@
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
   transition-duration: 0.25s;
 }
+.headerMainDiv .header2 .menu__logo {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
 .headerMainDiv .header2 .menu__item {
   display: block;
   padding: 12px 24px;

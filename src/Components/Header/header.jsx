@@ -95,6 +95,7 @@ function Header(props) {
                                         </label>
                                         {open ? (
                                             <ul className="menu__box">
+                                                <a className="menu__logo" href='#'><img src={props.theme === 'light' ? logoImage : logoImage1} alt="logo" /></a>
                                                 <li><a className="menu__item" href="#">Login / Signup</a></li>
                                                 <li><a className="menu__item" href="#" onClick={props.changeTheme}>Change Theme</a></li>
                                                 <li><a className="menu__item" href="#">How it works</a></li>

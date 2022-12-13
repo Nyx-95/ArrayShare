@@ -17,6 +17,7 @@ $font-color3: #8300c8;
     src: local("Expose-Black"),
         url("./Fonts/Expose/Expose-Black.ttf") format("truetype");
 }
+
 @font-face {
     font-family: "Expose-Regular";
     src: local("Expose-Black"),
@@ -66,18 +67,20 @@ $font-color3: #8300c8;
         }
 
         .headerDarkButton {
-            
+
             .changeTheme {
                 color: $font-color2;
             }
         }
-        .header2{
-            .menu__box {   
+
+        .header2 {
+            .menu__box {
                 background-color: $button-background-color3;
-            
+
             }
+
             .menu__item {
-              color: rgb(105, 105, 105);
+                color: rgb(105, 105, 105);
             }
         }
 
@@ -156,41 +159,44 @@ $font-color3: #8300c8;
 
 
     .logoHeaderLabel1 {
-      
+
         margin-bottom: 0px;
     }
 
     .logoHeaderLabel2 {
         font-size: 40px;
-       
+
     }
 
     .headerDarkButton {
         margin-top: 15px;
         font-size: 22px;
-        .sunlogo{
+
+        .sunlogo {
             margin-bottom: 10px;
             margin-right: 6px;
         }
-        .moonlogo{
+
+        .moonlogo {
             width: 23px;
             margin-bottom: 10px;
             margin-left: 10px;
         }
+
         .switch {
             position: relative;
             display: inline-block;
             width: 55px;
             height: 28px;
-          }
-          
-          .switch input { 
+        }
+
+        .switch input {
             opacity: 0;
             width: 0;
             height: 0;
-          }
-          
-          .slider {
+        }
+
+        .slider {
             position: absolute;
             cursor: pointer;
             top: 0;
@@ -200,9 +206,9 @@ $font-color3: #8300c8;
             background-color: #ccc;
             -webkit-transition: .4s;
             transition: .4s;
-          }
-          
-          .slider:before {
+        }
+
+        .slider:before {
             position: absolute;
             content: "";
             height: 20px;
@@ -212,30 +218,30 @@ $font-color3: #8300c8;
             background-color: white;
             -webkit-transition: .4s;
             transition: .4s;
-          }
-          
-          input:checked + .slider {
+        }
+
+        input:checked+.slider {
             background-color: $button-background-color1;
-          }
-          
-          input:focus + .slider {
+        }
+
+        input:focus+.slider {
             box-shadow: 0 0 1px $button-background-color1;
-          }
-          
-          input:checked + .slider:before {
+        }
+
+        input:checked+.slider:before {
             -webkit-transform: translateX(26px);
             -ms-transform: translateX(26px);
             transform: translateX(26px);
-          }
-          
-          /* Rounded sliders */
-          .slider.round {
+        }
+
+        /* Rounded sliders */
+        .slider.round {
             border-radius: 34px;
-          }
-          
-          .slider.round:before {
+        }
+
+        .slider.round:before {
             border-radius: 50%;
-          }
+        }
     }
 
     .headerButtonGroupDiv {
@@ -279,18 +285,18 @@ $font-color3: #8300c8;
         }
     }
 
-   
+
 
     .headerLoginButton button {
         margin-top: 10px;
         border-radius: 25px;
-   
+
         font-size: 14px;
         font-family: "Expose-Regular";
         background-color: $button-background-color1;
         border: 1px solid $button-background-color1;
         color: $font-color2;
-    
+
 
         &:hover {
             background-color: $button-background-color1;
@@ -392,6 +398,14 @@ $font-color3: #8300c8;
             background-color: #ECEFF1;
             box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
             transition-duration: .25s;
+         
+        }
+
+        .menu__logo {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+
         }
 
         .menu__item {
@@ -426,7 +440,7 @@ $font-color3: #8300c8;
 
         @keyframes changeBg {
 
-          
+
             0% {
                 background-image: url("./Assets/backgroundImage0.png");
 
@@ -443,6 +457,7 @@ $font-color3: #8300c8;
             75% {
                 background-image: url("./Assets/backgroundImage3.jpg");
             }
+
             100% {
                 background-image: url("./Assets/backgroundImage0.png");
 
@@ -463,8 +478,8 @@ $font-color3: #8300c8;
             .glassInner {
                 @include flexCenterRow;
                 flex-direction: column;
-           
-            font-family: "Expose-Regular";
+
+                font-family: "Expose-Regular";
 
                 .formTextDiv {
                     display: flex;
@@ -599,7 +614,7 @@ $font-color3: #8300c8;
                 border-radius: 0px 0px 15px 15px;
                 padding-top: 5px;
                 padding-bottom: 5px;
-                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
                 label {
                     color: white;
@@ -607,7 +622,7 @@ $font-color3: #8300c8;
                     a {
                         color: rgb(15, 15, 15);
                         text-decoration: none;
-                        
+
                         font-weight: bold;
                     }
                 }
@@ -620,7 +635,7 @@ $font-color3: #8300c8;
         min-height: 700px;
         border-radius: 25px 25px 0px 0px;
         position: relative;
-     
+
         @include flexCenterColumn;
 
         .floatingIconsMain {
@@ -648,16 +663,21 @@ $font-color3: #8300c8;
                     margin-top: 5px;
 
                     animation-duration: 4s;
-                    animation-timing-function: cubic-bezier(.18,1.17,.03,1.46);
+                    animation-timing-function: cubic-bezier(.18, 1.17, .03, 1.46);
                     animation-fill-mode: backwards;
                     transform-origin: center;
                     transform-box: fill-box;
                     animation-name: littleSquare;
 
-                      @keyframes littleSquare {
-                        from { transform: translate(226%, 183%) rotate(140deg) scale(0) ; }
-                        to { transform: translate(0%, 0%) rotate(0deg) scale(1); }
-                      }
+                    @keyframes littleSquare {
+                        from {
+                            transform: translate(226%, 183%) rotate(140deg) scale(0);
+                        }
+
+                        to {
+                            transform: translate(0%, 0%) rotate(0deg) scale(1);
+                        }
+                    }
 
                     @keyframes floatingIconsImage {
                         0% {
@@ -684,10 +704,10 @@ $font-color3: #8300c8;
                         font-size: 16px;
                         margin-left: 10px;
                         color: $font-color2;
-                        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                     }
                 }
-           
+
 
                 .floatingIconsImage1 {
                     background-color: $button-background-color1;
@@ -700,15 +720,21 @@ $font-color3: #8300c8;
                     @include flexCenterRow;
 
                     animation-duration: 4s;
-                    animation-timing-function: cubic-bezier(.18,1.17,.03,1.46);
+                    animation-timing-function: cubic-bezier(.18, 1.17, .03, 1.46);
                     animation-fill-mode: backwards;
                     transform-origin: center;
                     transform-box: fill-box;
                     animation-name: bigCircle;
+
                     @keyframes bigCircle {
-                        from { transform: scale(0) translate(60%, 3%); }
-                        to { transform: scale(1) translate(0%, 0%); }
-                      }
+                        from {
+                            transform: scale(0) translate(60%, 3%);
+                        }
+
+                        to {
+                            transform: scale(1) translate(0%, 0%);
+                        }
+                    }
 
 
                     @keyframes floatingIconsImage1 {
@@ -776,16 +802,23 @@ $font-color3: #8300c8;
                     justify-content: space-between;
 
                     animation-duration: 4s;
-                    animation-timing-function: cubic-bezier(.18,1.17,.03,1.46);
+                    animation-timing-function: cubic-bezier(.18, 1.17, .03, 1.46);
                     animation-fill-mode: backwards;
                     transform-origin: center;
                     transform-box: fill-box;
                     animation-name: hoop;
+
                     @keyframes hoop {
-                        from { transform: translate(-226%, -183%) rotate(360deg) scale(0) ; }
-                        to { transform: translate(0%, 0%) rotate(0deg) scale(1); }
-                      }
-                      /*
+                        from {
+                            transform: translate(-226%, -183%) rotate(360deg) scale(0);
+                        }
+
+                        to {
+                            transform: translate(0%, 0%) rotate(0deg) scale(1);
+                        }
+                    }
+
+                    /*
                     @keyframes hoop {
                         from { transform: translate(-160%, -33%) scale(0) ; }
                         to { transform: translate(0%, 0%) scale(1); }
@@ -820,7 +853,7 @@ $font-color3: #8300c8;
                         font-size: 16px;
                         margin-left: 10px;
                         color: $font-color2;
-                        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                     }
                 }
 
@@ -834,15 +867,21 @@ $font-color3: #8300c8;
                     margin-top: 5px;
 
                     animation-duration: 4s;
-                    animation-timing-function: cubic-bezier(.18,1.17,.03,1.46);
+                    animation-timing-function: cubic-bezier(.18, 1.17, .03, 1.46);
                     animation-fill-mode: backwards;
                     transform-origin: center;
                     transform-box: fill-box;
                     animation-name: bigCircle;
+
                     @keyframes bigCircle {
-                        from { transform: scale(0) translate(60%, 3%); }
-                        to { transform: scale(1) translate(0%, 0%); }
-                      }
+                        from {
+                            transform: scale(0) translate(60%, 3%);
+                        }
+
+                        to {
+                            transform: scale(1) translate(0%, 0%);
+                        }
+                    }
 
                     @keyframes floatingIconsImage {
                         0% {
@@ -887,16 +926,17 @@ $font-color3: #8300c8;
                 color: $font-color1;
                 font-size: 60px;
                 font-family: "Expose-Black";
-           
+
             }
 
             .rightBodyh2 {
                 color: #8300c8;
                 font-size: 60px;
                 font-family: "Expose-Black";
-           
+
             }
-            p{
+
+            p {
                 font-family: "Expose-Regular";
             }
         }
