@@ -5,11 +5,27 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Container from 'react-bootstrap/Container';
 import logoImage from '../../Assets/logoHeaderBlack.png'
 import logoImage1 from '../../Assets/logoHeaderWhite.png';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import $ from 'jquery'
+import * as React from 'react';
+import sunlogo from "../../Assets/sun.png"
+import Moonlogo from "../../Assets/Moon.png"
+import ClickAwayListener from '@mui/material/ClickAwayListener';
+
 
 
 function Header(props) {
+
+    const [open, setOpen] = useState(false);
+
+    const handleClick = () => {
+        setOpen((prev) => !prev);
+    };
+
+    const handleClickAway = () => {
+        document.getElementById("menu__toggle").checked = false;
+        setOpen(false);
+    };
 
     useEffect(() => {
         let screenWidth = window.innerWidth;
@@ -20,6 +36,13 @@ function Header(props) {
         else {
             $(".header1").show()
             $(".header2").hide()
+        }
+
+        if(props.theme === 'light'){
+            $(".headerCheck").prop("checked", false);
+        }
+        else{
+            $(".headerCheck").prop("checked", true);
         }
 
     });
@@ -34,7 +57,7 @@ function Header(props) {
                             <img src={props.theme === 'light' ? logoImage : logoImage1} alt="logo" />
                         </Col>
 
-                        <Col md={6} lg={6} xl={6}>
+                        <Col md={5} lg={5} xl={5}>
                             <div className='headerButtonGroupDiv'>
                                 <ButtonGroup className="mb-2">
                                     <Button className='headerGroupButton'>How it Works</Button>
@@ -44,13 +67,14 @@ function Header(props) {
                                 </ButtonGroup>
                             </div>
                         </Col>
-                        <Col md={1} lg={1} xl={1}>
+                        <Col md={2} lg={2} xl={2}>
                             <div className='headerDarkButton'>
-                                {/*<button className='changeTheme' onClick={props.changeTheme} ><i className="ri-sun-line"></i> </button>*/}
+                                <img className='sunlogo' src={sunlogo}></img>
                                 <label className="switch">
-                                    <input type="checkbox"  onChange={props.changeTheme}/>
+                                    <input type="checkbox" onChange={props.changeTheme} className="headerCheck" />
                                     <span className="slider round"></span>
                                 </label>
+                                <img className='moonlogo' src={Moonlogo}></img>
                             </div>
                         </Col>
                         <Col md={2} lg={2} xl={2}> <div className='headerLoginButton'><Button>Login / Register</Button></div></Col>
@@ -60,28 +84,30 @@ function Header(props) {
                         <Col xs={6} sm={6} md={6} lg={3} xl={3}>
                             <img src={props.theme === 'light' ? logoImage : logoImage1} alt="logo" />
                         </Col>
+                        <ClickAwayListener mouseEvent="onMouseDown" touchEvent="onTouchStart" onClickAway={handleClickAway}  >
 
-                        <Col xs={6} sm={6} md={6} lg={2} xl={2}>
-                            <div className="hamburger-menu">
-                                <div className="hamburger-menu-inner">
-                                    <input id="menu__toggle" type="checkbox" />
-                                    <label className="menu__btn" htmlFor="menu__toggle">
-                                        <span></span>
-                                    </label>
-
-                                    <ul className="menu__box">
-                                        <li><a className="menu__item" href="#">Login / Signup</a></li>
-                                        <li><a className="menu__item" href="#" onClick={props.changeTheme}>Change Theme</a></li>
-                                        <li><a className="menu__item" href="#">How it works</a></li>
-                                        <li><a className="menu__item" href="#">Download</a></li>
-                                        <li><a className="menu__item" href="#">Upgrade</a></li>
-                                        <li><a className="menu__item" href="#">Feedback</a></li>
-
-                                    </ul>
+                            <Col xs={6} sm={6} md={6} lg={2} xl={2}>
+                                <div className="hamburger-menu">
+                                    <div className="hamburger-menu-inner">
+                                        <input id="menu__toggle" type="checkbox" />
+                                        <label className="menu__btn" htmlFor="menu__toggle" onClick={handleClick}>
+                                            <span></span>
+                                        </label>
+                                        {open ? (
+                                            <ul className="menu__box">
+                                                <li><a className="menu__item" href="#">Login / Signup</a></li>
+                                                <li><a className="menu__item" href="#" onClick={props.changeTheme}>Change Theme</a></li>
+                                                <li><a className="menu__item" href="#">How it works</a></li>
+                                                <li><a className="menu__item" href="#">Download</a></li>
+                                                <li><a className="menu__item" href="#">Upgrade</a></li>
+                                                <li><a className="menu__item" href="#">Feedback</a></li>
+                                            </ul>
+                                        ) : null}
+                                    </div>
                                 </div>
-                            </div>
-                        </Col>
+                            </Col>
 
+                        </ClickAwayListener>
                     </Row>
                 </Container>
             </div>

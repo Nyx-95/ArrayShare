@@ -23,7 +23,7 @@ function Body() {
     <>
 
         <div className="bodyMain">
-            <Container>
+            <Container fluid="xl">
                 <Row>
                     <Col md={12} lg={6} xl={6}><LeftBodyPart></LeftBodyPart></Col>
                     <Col md={0} lg={6} xl={6} className="rightMenu"><RightBodyPart></RightBodyPart></Col>

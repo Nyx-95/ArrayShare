@@ -18,7 +18,6 @@ function leftBodyPart() {
     $(".fileButton").css({"font-size": "40px", "bottom": "15%"});
     $(".textButton").css({"font-size": "60px", "bottom": "8%"});
 
-    
     $(".fileButton").css({"color": "rgba(255, 255, 255, 0.3)"});
     $(".textButton").css({"color": "white"});
   

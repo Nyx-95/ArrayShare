@@ -2,6 +2,10 @@
   font-family: "Expose-Black";
   src: local("Expose-Black"), url("./Fonts/Expose/Expose-Black.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Expose-Regular";
+  src: local("Expose-Black"), url("./Fonts/Expose/Expose-Regular.ttf") format("truetype");
+}
 .dark {
   background-color: rgb(15, 15, 15);
 }
@@ -10,6 +14,7 @@
   border: 1px solid rgb(26, 26, 26);
   color: white;
   font-size: 14px;
+  font-family: "Expose-Regular";
 }
 .dark .headerMainDiv .headerDarkButton .changeTheme {
   color: white;
@@ -62,17 +67,24 @@
   padding-top: 20px;
 }
 .headerMainDiv .logoHeaderLabel1 {
-  font-family: "Expose-Black";
   margin-bottom: 0px;
 }
 .headerMainDiv .logoHeaderLabel2 {
   font-size: 40px;
-  font-family: "Expose-Black";
 }
 .headerMainDiv .headerDarkButton {
   margin-top: 15px;
   font-size: 22px;
   /* Rounded sliders */
+}
+.headerMainDiv .headerDarkButton .sunlogo {
+  margin-bottom: 10px;
+  margin-right: 6px;
+}
+.headerMainDiv .headerDarkButton .moonlogo {
+  width: 23px;
+  margin-bottom: 10px;
+  margin-left: 10px;
 }
 .headerMainDiv .headerDarkButton .switch {
   position: relative;
@@ -129,6 +141,7 @@
   border: 1px solid #f6fafa;
   color: black;
   font-size: 14px;
+  font-family: "Expose-Regular";
 }
 .headerMainDiv .headerButtonGroupDiv .headerGroupButton:hover {
   background-color: #8300c8;
@@ -155,10 +168,10 @@
   margin-top: 10px;
   border-radius: 25px;
   font-size: 14px;
+  font-family: "Expose-Regular";
   background-color: #8300c8;
   border: 1px solid #8300c8;
   color: white;
-  font-size: 14px;
 }
 .headerMainDiv .headerLoginButton button:hover {
   background-color: #8300c8;
@@ -323,6 +336,7 @@
   align-items: center;
   flex-direction: row;
   flex-direction: column;
+  font-family: "Expose-Regular";
 }
 .bodyMain .leftBodyMain .glass .glassInner .formTextDiv {
   display: flex;
@@ -372,6 +386,7 @@
   background-color: rgba(0, 0, 0, 0.507);
   color: white;
   width: 100%;
+  outline: none;
 }
 .bodyMain .leftBodyMain .glass .glassInner .formTextDiv .formTextAreaDiv a {
   position: absolute;
@@ -432,13 +447,17 @@
   width: 100%;
   background-color: #8300c8;
   border-radius: 0px 0px 15px 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .bodyMain .leftBodyMain .glass .glassFooter label {
   color: white;
 }
 .bodyMain .leftBodyMain .glass .glassFooter label a {
-  color: black;
+  color: rgb(15, 15, 15);
   text-decoration: none;
+  font-weight: bold;
 }
 .bodyMain .rightBodyMain {
   height: 100%;
@@ -454,6 +473,8 @@
   position: absolute;
   top: 20%;
   width: 100%;
+  transform: translateY(-50%);
+  will-change: transform;
 }
 .bodyMain .rightBodyMain .floatingIconsMain .floatingIcons1 {
   display: flex;
@@ -472,16 +493,34 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -webkit-animation-name: floatingIconsImage;
-          animation-name: floatingIconsImage;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
   margin-left: 30px;
   margin-top: 5px;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: cubic-bezier(0.18, 1.17, 0.03, 1.46);
+          animation-timing-function: cubic-bezier(0.18, 1.17, 0.03, 1.46);
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  transform-origin: center;
+  transform-box: fill-box;
+  -webkit-animation-name: littleSquare;
+          animation-name: littleSquare;
+}
+@-webkit-keyframes littleSquare {
+  from {
+    transform: translate(226%, 183%) rotate(140deg) scale(0);
+  }
+  to {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
+  }
+}
+@keyframes littleSquare {
+  from {
+    transform: translate(226%, 183%) rotate(140deg) scale(0);
+  }
+  to {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
+  }
 }
 @-webkit-keyframes floatingIconsImage {
   0% {
@@ -514,6 +553,7 @@
   font-size: 16px;
   margin-left: 10px;
   color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .bodyMain .rightBodyMain .floatingIconsMain .floatingIcons1 .floatingIconsImage1 {
   background-color: #8300c8;
@@ -521,20 +561,38 @@
   position: absolute;
   right: 0;
   padding: 10px;
-  -webkit-animation-name: floatingIconsImage1;
-          animation-name: floatingIconsImage1;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
   margin-left: 30px;
   margin-top: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: cubic-bezier(0.18, 1.17, 0.03, 1.46);
+          animation-timing-function: cubic-bezier(0.18, 1.17, 0.03, 1.46);
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  transform-origin: center;
+  transform-box: fill-box;
+  -webkit-animation-name: bigCircle;
+          animation-name: bigCircle;
+}
+@-webkit-keyframes bigCircle {
+  from {
+    transform: scale(0) translate(60%, 3%);
+  }
+  to {
+    transform: scale(1) translate(0%, 0%);
+  }
+}
+@keyframes bigCircle {
+  from {
+    transform: scale(0) translate(60%, 3%);
+  }
+  to {
+    transform: scale(1) translate(0%, 0%);
+  }
 }
 @-webkit-keyframes floatingIconsImage1 {
   0% {
@@ -575,6 +633,8 @@
   position: absolute;
   bottom: 20%;
   width: 100%;
+  transform: translateY(-50%);
+  will-change: transform;
 }
 .bodyMain .rightBodyMain .floatingIconsMain1 .floatingIcons2 {
   display: flex;
@@ -594,16 +654,34 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -webkit-animation-name: floatingIconsImage;
-          animation-name: floatingIconsImage;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: cubic-bezier(0.18, 1.17, 0.03, 1.46);
+          animation-timing-function: cubic-bezier(0.18, 1.17, 0.03, 1.46);
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  transform-origin: center;
+  transform-box: fill-box;
+  -webkit-animation-name: hoop;
+          animation-name: hoop;
   margin-left: 30px;
   margin-top: 5px;
+}
+@-webkit-keyframes hoop {
+  from {
+    transform: translate(-160%, -33%) scale(0);
+  }
+  to {
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+@keyframes hoop {
+  from {
+    transform: translate(-160%, -33%) scale(0);
+  }
+  to {
+    transform: translate(0%, 0%) scale(1);
+  }
 }
 @keyframes floatingIconsImage {
   0% {
@@ -627,6 +705,7 @@
   font-size: 16px;
   margin-left: 10px;
   color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .bodyMain .rightBodyMain .floatingIconsMain1 .floatingIcons2 .floatingIconsImage1 {
   position: absolute;
@@ -634,16 +713,26 @@
   background-color: #8300c8;
   border-radius: 15px;
   padding: 10px;
-  -webkit-animation-name: floatingIconsImage;
-          animation-name: floatingIconsImage;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
   margin-left: 30px;
   margin-top: 5px;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: cubic-bezier(0.18, 1.17, 0.03, 1.46);
+          animation-timing-function: cubic-bezier(0.18, 1.17, 0.03, 1.46);
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  transform-origin: center;
+  transform-box: fill-box;
+  -webkit-animation-name: bigCircle;
+          animation-name: bigCircle;
+}
+@keyframes bigCircle {
+  from {
+    transform: scale(0) translate(60%, 3%);
+  }
+  to {
+    transform: scale(1) translate(0%, 0%);
+  }
 }
 @keyframes floatingIconsImage {
   0% {
@@ -685,10 +774,14 @@
   font-size: 60px;
   font-family: "Expose-Black";
 }
+.bodyMain .rightBodyMain .rightBodyMainInner p {
+  font-family: "Expose-Regular";
+}
 .bodyMain .rightBodyMain .rightBodyMainFooter {
   position: absolute;
   bottom: 0;
   margin-left: 50px;
+  font-family: "Expose-Regular";
 }
 .bodyMain .rightBodyMain .rightBodyMainFooter label a {
   color: #8300c8;
